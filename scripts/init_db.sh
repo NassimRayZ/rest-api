@@ -21,13 +21,18 @@ if [[ -z "${SKIP_DOCKER}" ]]; then
 		-d postgres \
 		postgres -N 1000
 fi
-export PGPASSWORD="${DB_PASSWORD}"
+
 until psql -h "localhost" -U "${DB_USER}" -p "${DB_PORT}" -d "postgres" -c '\q'; do
 	echo >&2 "Postgres is still unavailable - sleeping"
 	sleep 1
 done
 
 echo >&2 "Postgres is up and running on port ${DB_PORT}!"
-export DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_NAME}
-pnpm prisma migrate dev
+
+if ! [ -x "$(command -v pnpm)" ]; then
+	npm prisma migrate dev
+else
+	pnpm prisma migrate dev
+fi
+
 echo >&2 "Postgress has been migrated, ready to go!"
