@@ -7,7 +7,7 @@ else
 	pnpm install
 fi
 
-./init_db.sh
+scripts/init_db.sh
 
 if ! [ -x "$(command -v pnpm)" ]; then
 	npm run dev

@@ -7,3 +7,9 @@ This is a simple express app implementing a basic functionality of adding items 
 2. install postgres docker image via `docker pull postgres` and postgres client `psql`
 3. execute `scripts/init_app.sh` script
 4. after that you now can execute the server directly via `npm run dev`
+
+
+## Video
+
+Here is a video that shows the execution of this application
+![](video.mkv)
