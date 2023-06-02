@@ -14,6 +14,6 @@ This is a simple express app implementing a basic functionality of adding items 
 Here is a video that shows the execution of this application
 
 <video width="320" height="240" controls>
-  <source src="video.mov" type="video/mp4">
+  <source src="video.mkv" type="video/mkv">
 </video>
 
