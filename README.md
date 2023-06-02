@@ -14,3 +14,4 @@ This is a simple express app implementing a basic functionality of adding items 
 Here is a video that shows the execution of this application
 
 
+https://github.com/NassimRayZ/simple-rest-api/assets/81870458/7c95d218-3726-4dbd-a43e-ae8b0b996c7e
