@@ -1,4 +1,6 @@
 node_modules
+package-lock.json
+pnpm-lock.yaml
 # Keep environment variables out of version control
 # Uncomment the next line if you are working in production environment
 # .env
